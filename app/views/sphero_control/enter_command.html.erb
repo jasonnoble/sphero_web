@@ -1,0 +1,7 @@
+<h1>Welcome to Sphero!</h1>
+
+<%= form_tag '/sphero_control/set_color' do %>
+  <%= select_tag 'color', options_from_collection_for_select(SpheroColors.all_colors, "rgb_value", "color") %>
+  <%= submit_tag %>
+<% end %>
+

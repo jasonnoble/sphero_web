@@ -5,3 +5,13 @@
   <%= submit_tag %>
 <% end %>
 
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<%= form_tag({:action => :set_color_via_wav_file}, :multipart => true) do %>
+    <%= file_field_tag 'command' %>
+    <%= submit_tag %>
+<% end %>
+

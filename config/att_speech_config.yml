@@ -1,0 +1,15 @@
+
+# Licensed by AT&T under 'Software Development Kit Tools Agreement.' 2012
+# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION: http://developer.att.com/sdk_agreement/
+# Copyright 2012 AT&T Intellectual Property. All rights reserved. http://developer.att.com
+# For more information contact developer.support@att.com
+
+port:               4567
+api_key:            2ae0db5cbfd06ffe635b1f5965d61e4b
+secret_key:         4873344e143cf29b
+tokens_file:        tokens
+FQDN:               https://api.att.com
+endpoint:           https://api.att.com/rest/2/SpeechToText
+speech_context:     Generic, TV, BusinessSearch, Websearch, SMS, Voicemail, QuestionAndAnswer
+X_arg:              
+default_audio_file: bostonSeltics.wav

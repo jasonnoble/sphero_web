@@ -5,13 +5,20 @@
   <%= submit_tag %>
 <% end %>
 
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<% 5.times do %>
+    <p></p>
+<% end %>
 
 <%= form_tag({:action => :set_color_via_wav_file}, :multipart => true) do %>
     <%= file_field_tag 'command' %>
-    <%= submit_tag %>
+    <%= submit_tag 'Upload WAV file' %>
 <% end %>
 
+<% 5.times do %>
+    <p></p>
+<% end %>
+
+<%= form_tag '/sphero_control/send_morse_code' do %>
+    <%= text_field_tag 'text' %>
+    <%= submit_tag 'Send Morse Code' %>
+<% end %>

@@ -9,7 +9,7 @@ class SpheroControlController < ApplicationController
   def set_color
     color, red, green, blue = params[:color].split(',')
     sphero.rgb(red.to_i, green.to_i, blue.to_i)
-    redirect_to root_path, :notice => 'Color set to #{color}'
+    redirect_to root_path, :notice => "Color set to #{color}"
   end
 
   def set_color_via_wav_file
@@ -22,7 +22,7 @@ class SpheroControlController < ApplicationController
       sphero.rgb(red.to_i, green.to_i, blue.to_i)
       sleep(1)
     end
-    redirect_to root_path, :notice => 'Color set to blah'
+    redirect_to root_path, :notice => 'Color set via AT&T Text to Speech'
   end
 
   def send_morse_code

@@ -1,8 +1,9 @@
 <h1>Welcome to Sphero!</h1>
 
 <%= form_tag '/sphero_control/set_color' do %>
+  <%= label_tag 'Select a Color:' %>
   <%= select_tag 'color', options_from_collection_for_select(SpheroColors.all_colors, "rgb_value", "color") %>
-  <%= submit_tag %>
+  <%= submit_tag 'Set Sphero Color Via Drop Down', :class => 'button' %>
 <% end %>
 
 <% 5.times do %>
@@ -10,8 +11,9 @@
 <% end %>
 
 <%= form_tag({:action => :set_color_via_wav_file}, :multipart => true) do %>
+    <%= label_tag 'Select a WAV file:' %>
     <%= file_field_tag 'command' %>
-    <%= submit_tag 'Upload WAV file' %>
+    <%= submit_tag 'Set Sphero Color Via AT&T TTS', :class => 'button'%>
 <% end %>
 
 <% 5.times do %>
@@ -19,6 +21,7 @@
 <% end %>
 
 <%= form_tag '/sphero_control/send_morse_code' do %>
+    <%= label_tag 'Enter Text:' %>
     <%= text_field_tag 'text' %>
-    <%= submit_tag 'Send Morse Code' %>
+    <%= submit_tag 'Send Morse Code', :class => 'button' %>
 <% end %>

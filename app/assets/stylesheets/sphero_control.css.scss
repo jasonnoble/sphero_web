@@ -1,3 +1,37 @@
 // Place all the styles related to the sphero_control controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  width: 700px;
+}
+
+#flash_notice {
+  background-color: #27F595;
+  font-size: 2em;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+.button {
+  border: 1px solid #006;
+  background: #9cf;
+  margin-left: 20px;
+  float: right;
+}
+
+select {
+  width: 200px;
+}
+
+input {
+  width: 200px;
+}
+
+label {
+  display: block;
+  width: 150px;
+  float: left;
+  margin: 2px 4px 6px 4px;
+  text-align: right;
+}
